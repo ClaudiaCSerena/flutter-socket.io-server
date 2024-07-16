@@ -8,7 +8,7 @@ const app = express(); //creo una aplicación, esto lo inicializa y puedo escuch
 //Node server:
 const server = require('http').createServer(app); //cre mi servidor
 module.exports.io = require('socket.io')(server); //para exportar io
-require('./sockets/socket');
+require('./sockets/socket.js');
 
 //Path (carpeta) público
 const publicPath = path.resolve(__dirname, 'public'); //debo crear la carpeta public

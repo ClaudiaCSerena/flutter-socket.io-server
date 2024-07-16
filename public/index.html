@@ -20,10 +20,17 @@
             console.log('Perdimos comunicación con el servidor')
         });
 
-        socket.emit('mensaje',{nombre: 'Fernando'});
-        socket.on('mensaje', function(payload){
+        socket.emit('mensaje',{nombre: 'Claudia'}); // "emit" es para emitir mensajes
+
+        socket.on('nuevo-mensaje', function(payload){ //"on" es para escuchar
             console.log('Escuchando', payload);
-        })
+        });
+
+        socket.on('active-bands', function(bands){
+            console.clear(); //para limpiar la consola
+            console.table(bands);
+
+        });
 
     </script>
     
